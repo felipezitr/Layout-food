@@ -1,0 +1,511 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: #00334e;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bloco-2 {
+    width: 50%;
+    float: left;
+}
+
+.bloco-2 img {
+    width: 100%;
+}
+
+.bloco-3 {
+    width: 33.3%;
+    float: left;
+    padding: 20px;
+}
+
+.bloco-4 {
+    width: 25%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+}
+
+
+#topo {
+    background: #fff2d9;
+    padding: 15px;
+    overflow: hidden;
+}
+
+#topo .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#topo .menu ul li {
+    display: inline-block;
+    padding: 10px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.menu ul li a {
+    color: #444;
+    transition: all 1s ease;
+}
+
+.menu li a:hover {
+    color: #00cc99;
+}
+
+#topo .logo {
+    float: left;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 220%;
+    font-family: 'Bagel Fat One', cursive;
+    padding-top: 10px;
+}
+
+#topo .logo img {
+    vertical-align: middle;
+}
+
+#topo .menu {
+    float: right;
+}
+
+#banner {
+    background: #fff2d9;
+    overflow: hidden;
+    padding: 25px 15px;
+    margin-bottom: 100px;
+}
+
+#banner h2 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+#banner p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#banner input.icon-whats {
+    padding: 22px 5px 22px 55px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    background: url(../imagens/whats.png) no-repeat 20px center, #fff;
+    background-size: 20px auto;
+    width: 60%;
+}
+
+#banner input::placeholder {
+    color: #00334e;
+}
+
+#banner .bt-whats {
+    padding: 25px 5px;
+    border: none;
+    background: url(../imagens/seta-branca.png) no-repeat center center, #000000;
+    background-size: 20px auto;
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+    width: 10%;
+    height: 59px;
+    cursor: pointer;
+    animation: seta 2s linear infinite;
+}
+
+.img-banner {
+    margin-left: 160%;
+    animation-name: direita;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.6, 0.56, 1.29);
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    padding: 0 15px;
+}
+
+.imagem img {
+    width: 100%;
+    min-width: 95%;
+    height: 240px;
+}
+
+#cardapio .imagem {
+    position: relative;
+}
+
+#cardapio .imagem::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 80%;
+    height: 80%;
+    background-color: #00334e;
+    z-index: -1;
+}
+
+#cardapio .imagem::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    right: -5px;
+    width: 80%;
+    height: 80%;
+    background-color: #00cc99;
+    z-index: -1;
+}
+
+.infos-prato h3 {
+    margin-bottom: 0;
+}
+
+.infos-prato p {
+    margin-top: 10px;
+}
+
+.bt-destaque {
+    display: block;
+    width: 170px;
+    margin: 20px auto;
+    overflow: hidden;
+    text-align: center;
+    background: #00cc99;
+    padding: 15px 5px;
+    border-radius: 200px;
+    color: #fff;
+    margin-bottom: 100px;
+}
+
+.receba .infos-prato {
+    text-align: center;
+}
+
+.receba .imagem {
+    text-align: center;
+    position: relative;
+}
+
+.receba .imagem::before {
+    content: '1';
+    display: block;
+    background: #2900ff;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+}
+
+.receba .bloco-3:nth-child(2) .imagem::before {
+    content: '2';
+}
+
+.receba .bloco-3:nth-child(3) .imagem::before {
+    content: '3';
+}
+
+#receba {
+    overflow: hidden;
+}
+
+#vantagens {
+    margin-top: 100px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#vantagens .numero {
+    width: 15%;
+    float: left;
+    font-size: 42px;
+    color: #dcdcdc;
+    text-align: center;
+    padding-top: 25px;
+    margin-left: 10%;
+}
+
+#vantagens .vantagens {
+    width: 75%;
+    float: left;
+    padding: 0px 10px;
+}
+
+#vantagens .infos {
+    width: 100%;
+    overflow: hidden;
+}
+
+#vantagens .vantagens h4 {
+    margin-bottom: 0;
+}
+
+#vantagens .vantagens p {
+    margin-top: 10px;
+}
+
+#vantagens .rocket {
+    position: relative;
+}
+
+#vantagens .title {
+    margin-top: 100px;
+}
+
+#vantagens .back-foguete {
+    background: #fff2d9;
+    width: 90%;
+    height: 380px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: -1;
+    bottom: 120px;
+    margin-left: 5%;
+}
+
+.foguete {
+    text-align: center;
+}
+
+.foguete img {
+    max-width: 100%;
+}
+
+#depoimentos {
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+#depoimentos img {
+    max-width: 100%;
+}
+
+#depoimentos .depoimentos {
+    margin-top: 50px;
+}
+
+#depoimentos .depoimentos>p {
+    font-size: 20px;
+    padding: 10px 50px;
+    line-height: 36px;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+#depoimentos .cliente>div {
+    float: left;
+    width: 90%;
+    padding: 0 20px;
+}
+
+#depoimentos .cliente>img {
+    float: left;
+    width: 10%;
+}
+
+.cliente h4 {
+    margin: 0;
+}
+
+.cliente p {
+    margin: 0;
+}
+
+.depo img {
+    width: 40%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#parceiros {
+    background: #fff2d9;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 40px;
+    margin-left: -80px;
+}
+
+.container .bloco-4 img {
+    width: 80%;
+    margin-left: 180px;
+}
+
+/* .ifood{
+    margin-top: 50px;
+} */
+#parceiros .title {
+    margin-bottom: -20px;
+}
+
+#rodape p {
+    text-align: center;
+    padding: 10px 25px;
+}
+
+#mascara {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    /* caso não funcione em todos os navegadores, utilizar os seguintes comandos */
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+.menu-mobile {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin-top: 15%;
+}
+
+.menu-mobile li {
+    margin-top: 20px;
+}
+
+.menu-mobile a {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #333;
+    letter-spacing: 3px;
+}
+
+.menu-mobile a:hover {
+    color: #00cc99;
+}
+
+.bt-menu {
+    display: none;
+}
+
+.bt-menu a {
+    width: 28px;
+    height: 30px;
+    position: relative;
+    border-top: solid 1px #333;
+    display: block;
+}
+
+.fechar {
+    width: 80%;
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.fechar a {
+    color: #b78b8b;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes direita {
+    from {
+        margin-left: 160%;
+    }
+
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes seta {
+    0% {
+        background-position-x: center;
+    }
+
+    75% {
+        background-position-x: center;
+    }
+
+    85% {
+        background-position-x: 35%;
+    }
+
+    92% {
+        background-position-x: 65%;
+    }
+
+    100% {
+        background-position-x: center;
+    }
+}
+
+@media (max-width: 792px) {
+    .bloco-2 {
+        width: 100%;
+    }
+
+    .bloco-3 {
+        width: 50%;
+    }
+
+    .bloco-4 {
+        width: 50%;
+        width: 48%;
+        margin-left: 35px;
+    }
+
+    #banner h2,
+    #banner p,
+    #banner form {
+        text-align: center;
+    }
+
+    #receba .bloco-3 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 502px) {
+    .bloco-3 {
+        width: 100%;
+    }
+
+    .bloco-4 {
+        width: 50%;
+    }
+
+    .container .bloco-4 img,
+    #parceiros h2 {
+        margin-left: 50px;
+    }
+}
