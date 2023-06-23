@@ -172,8 +172,8 @@ body {
     position: absolute;
     top: -5px;
     left: -5px;
-    width: 80%;
-    height: 80%;
+    width: 0;
+    height: 0;
     background-color: #00334e;
     z-index: -1;
 }
@@ -184,10 +184,17 @@ body {
     position: absolute;
     bottom: -2px;
     right: -5px;
-    width: 80%;
-    height: 80%;
+    width: 0;
+    height: 0;
     background-color: #00cc99;
     z-index: -1;
+}
+
+#cardapio .imagem:hover::before,
+#cardapio .imagem:hover::after {
+    width: 80%;
+    height: 80%;
+    transition: all 0.5s ease;
 }
 
 .infos-prato h3 {
@@ -209,6 +216,26 @@ body {
     border-radius: 200px;
     color: #fff;
     margin-bottom: 100px;
+    position: relative;
+}
+
+.bt-destaque::after {
+    content: "";
+    display: block;
+    background: rgba(255, 255, 255, 0.3);
+    width: 8px;
+    height: 70px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    transition: all 0.3s linear;
+    transform: rotate(32deg);
+    animation: raio 2.5s linear infinite;
+    animation-delay: 2s;
+}
+
+.bt-destaque:hover::after {
+    left: 110%;
 }
 
 .receba .infos-prato {
@@ -464,6 +491,20 @@ body {
 
     100% {
         background-position-x: center;
+    }
+}
+
+@keyframes raio {
+    0% {
+        left: -15px;
+    }
+
+    90% {
+        left: -15px;
+    }
+
+    to {
+        left: 110%;
     }
 }
 
