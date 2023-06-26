@@ -331,6 +331,9 @@ body {
 
 .foguete {
     text-align: center;
+    position: relative;
+    animation: foguete 1.3s ease infinite;
+    animation-direction: alternate;
 }
 
 .foguete img {
@@ -507,6 +510,17 @@ body {
         left: 110%;
     }
 }
+
+@keyframes foguete {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -50px;
+    }
+}
+
 
 @media (max-width: 792px) {
     .bloco-2 {
