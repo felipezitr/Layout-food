@@ -351,23 +351,37 @@ body {
 
 #depoimentos .depoimentos {
     margin-top: 50px;
+    position: relative;
 }
 
-#depoimentos .depoimentos>p {
+#depoimentos .depoimentos .texto-depoimento p {
     font-size: 20px;
-    padding: 10px 50px;
+    padding: 10px 30px;
     line-height: 36px;
     font-style: italic;
     margin-bottom: 40px;
 }
 
-#depoimentos .cliente>div {
+#depoimentos .cliente {
+    overflow: hidden;
+    margin-top: 180px;
+    padding-left: 50px;
+}
+
+#depoimentos .cliente label {
+    float: left;
+    width: 50%;
+    opacity: 0.5;
+    transition: all 0.3s linear;
+}
+
+#depoimentos .cliente div {
     float: left;
     width: 90%;
     padding: 0 20px;
 }
 
-#depoimentos .cliente>img {
+#depoimentos .cliente img {
     float: left;
     width: 10%;
 }
@@ -378,6 +392,41 @@ body {
 
 .cliente p {
     margin: 0;
+}
+
+#depoimentos .texto-depoimento {
+    position: absolute;
+    left: 0;
+    top: 40px;
+}
+
+#depoimentos input {
+    display: none;
+}
+
+#dep-1+.texto-depoimento,
+#dep-2+.texto-depoimento {
+    opacity: 0;
+    z-index: -1;
+    transition: all 1s ease;
+}
+
+#dep-1:checked+.texto-depoimento {
+    opacity: 1;
+    z-index: 9;
+}
+
+#dep-1:checked~.texto-depoimento+.cliente label[for="dep-1"] {
+    opacity: 1;
+}
+
+#dep-2:checked+.texto-depoimento+.cliente label[for="dep-2"] {
+    opacity: 1;
+}
+
+#dep-2:checked+.texto-depoimento {
+    opacity: 1;
+    z-index: 9;
 }
 
 .depo img {
@@ -463,6 +512,11 @@ body {
 .fechar a {
     color: #b78b8b;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+#rodape a {
+    text-decoration: none;
+    color: #00334e;
 }
 
 @keyframes direita {
